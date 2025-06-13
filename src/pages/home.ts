@@ -8,6 +8,7 @@ import { Product } from "../type/productType";
 
 export default function Home(): HTMLElement {
   const element = document.createElement("div");
+  element.className = "flex flex-col gap-20";
   element.innerHTML = /*html*/ `
     <!-- Hero Section -->
     <section class="min-h-screen pt-20 px-6 md:px-8 flex flex-col lg:flex-row items-center justify-center gap-12 max-w-7xl mx-auto py-12 z-0">
@@ -141,6 +142,29 @@ export default function Home(): HTMLElement {
         </div>
     </section>
 
+    <!-- Other Product-->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+            <div>
+                <span class="text-sm font-medium text-green-700 mb-2 block">NEW STOCK</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Other Products</h2>
+                <div class="w-16 h-1 bg-green-700 mt-3"></div>
+            </div>
+            <a href="#/shop" class="flex items-center text-green-700 hover:text-green-800 mt-4 md:mt-0 group transition-colors">
+                <span class="font-medium">View all products</span>
+                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+            </a>
+            </div>
+
+            <div id="other-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Product cards will be inserted here -->
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-6 md:px-8">
@@ -162,7 +186,138 @@ export default function Home(): HTMLElement {
         </div>
     </section>
 
+    <!-- What people say section -->
+    <section class="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-10">What People Are Saying</h2>
+
+    <div class="flex flex-wrap gap-6 justify-center">
+      <!-- Testimonial Card -->
+      <div class="bg-white shadow-md rounded-2xl p-6 max-w-sm flex flex-col items-start hover:shadow-xl transition">
+        <div class="flex items-center mb-4">
+          <img class="w-12 h-12 rounded-full border-2 border-indigo-500" src="https://i.pravatar.cc/150?img=12" alt="User avatar">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900">Sokha Chan</h4>
+            <p class="text-sm text-gray-500">VIP Customer</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"This was hands down the best purchase I've made all year. The product quality was top-notch and delivery was fast. I’ll definitely be back for more!"</p>
+      </div>
+
+      <!-- Testimonial Card -->
+      <div class="bg-white shadow-md rounded-2xl p-6 max-w-sm flex flex-col items-start hover:shadow-xl transition">
+        <div class="flex items-center mb-4">
+          <img class="w-12 h-12 rounded-full border-2 border-indigo-500" src="https://i.pravatar.cc/150?img=32" alt="User avatar">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900">Vannak Meas</h4>
+            <p class="text-sm text-gray-500">Loyal Customer</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"I didn’t expect this product to be this good. It looked exactly like the photos and works perfectly. Highly recommended for anyone!"</p>
+      </div>
+
+      <!-- Testimonial Card -->
+      <div class="bg-white shadow-md rounded-2xl p-6 max-w-sm flex flex-col items-start hover:shadow-xl transition">
+        <div class="flex items-center mb-4">
+          <img class="w-12 h-12 rounded-full border-2 border-indigo-500" src="https://i.pravatar.cc/150?img=22" alt="User avatar">
+          <div class="ml-4">
+            <h4 class="text-lg font-semibold text-gray-900">Dara Koun</h4>
+            <p class="text-sm text-gray-500">First-Time Shopper</p>
+          </div>
+        </div>
+        <p class="text-gray-600 text-sm">"I was honestly surprised by how great the product was for the price. Super affordable, well-packaged, and just what I needed."
+
+</p>
+      </div>
+    </div>
+  </div>
+</section>
     
+<section class="w-full flex ">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div class="text-center space-y-5">
+            <h2 class="text-base font-semibold text-green-400 tracking-wide uppercase">Get started now</h2>
+            <div class="inline-flex items-end justify-center w-full text-center mx-auto">
+                <img src="https://randomuser.me/api/portraits/men/47.jpg"
+                    class="absolute transform translate-x-24 ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-white">
+                <img src="https://randomuser.me/api/portraits/men/49.jpg"
+                    class="absolute transform -translate-x-24 -ml-6 rounded-full w-12 h-12 md:w-16 md:h-16 border-4 border-white">
+                <img src="https://randomuser.me/api/portraits/women/46.jpg"
+                    class="absolute transform -translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-white">
+                <img src="https://randomuser.me/api/portraits/men/48.jpg"
+                    class="absolute transform translate-x-16 rounded-full w-16 h-16 md:w-20 md:h-20 border-4 border-white">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg"
+                    class="rounded-full w-20 h-20 md:w-24 md:h-24 border-4 border-white relative">
+            </div>
+            <p class="mt-1 text-4xl sm:text-5xl font-extrabold text-gray-900 sm:tracking-tight">Discover
+                your
+                potential
+                <span class="px-2 py-1 relative inline-block">
+                    <svg class="stroke-current bottom-0 absolute text-green-300 -translate-x-2" viewBox="0 0 410 18"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 6.4c16.8 16.8 380.8-11.2 397.6 5.602" stroke-width="12" fill="none"
+                            fill-rule="evenodd" stroke-linecap="round"></path>
+                    </svg>
+                    <span class="relative">with us</span>
+                </span>
+            </p>
+
+            <p class="max-w-3xl mt-5 mx-auto text-xl text-gray-500">
+                Sign up now and experience the difference in just
+                one week
+            </p>
+
+            <div class="flex flex-col sm:flex-row space-y-2.5 sm:space-y-0 sm:space-x-2.5 items-center justify-center">
+                <!-- Sign up with Email -->
+                <a href="#" class="w-full sm:w-auto">
+                    <button type="button"
+                        class="flex items-center justify-center px-4 py-3 w-full  shadow-sm font-medium rounded-full border border-green-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-200 transition duration-250 ease-in-out">
+                        <span class="text-base">Sign up with Email</span>
+                    </button>
+                </a>
+
+                <!-- Sign up with Google -->
+                <a href="#" class="w-full sm:w-auto sm:mt-0 mt-2 sm:ml-0 ml-2">
+                    <button type="button"
+                        class="flex items-center justify-center gap-4 px-4 py-3 w-full border border-green-400 shadow-sm font-medium rounded-full  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-200 transition duration-250 ease-in-out">
+                        <!-- Google Logo -->
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-0.5 0 48 48" version="1.1">
+                            <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Color-" transform="translate(-401.000000, -860.000000)">
+                                    <g id="Google" transform="translate(401.000000, 860.000000)">
+                                        <path
+                                            d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24"
+                                            id="Fill-1" fill="#FBBC05">
+
+                                        </path>
+                                        <path
+                                            d="M23.7136364,10.1333333 C27.025,10.1333333 30.0159091,11.3066667 32.3659091,13.2266667 L39.2022727,6.4 C35.0363636,2.77333333 29.6954545,0.533333333 23.7136364,0.533333333 C14.4268636,0.533333333 6.44540909,5.84426667 2.62345455,13.6042667 L10.5322727,19.6437333 C12.3545909,14.112 17.5491591,10.1333333 23.7136364,10.1333333"
+                                            id="Fill-2" fill="#EB4335">
+
+                                        </path>
+                                        <path
+                                            d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667"
+                                            id="Fill-3" fill="#34A853">
+
+                                        </path>
+                                        <path
+                                            d="M46.1454545,24 C46.1454545,22.6133333 45.9318182,21.12 45.6113636,19.7333333 L23.7136364,19.7333333 L23.7136364,28.8 L36.3181818,28.8 C35.6879545,31.8912 33.9724545,34.2677333 31.5177727,35.8144 L39.0249545,41.6181333 C43.3393409,37.6138667 46.1454545,31.6490667 46.1454545,24"
+                                            id="Fill-4" fill="#4285F4">
+
+                                        </path>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="text-base">Sign up with Google</span>
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
   `;
 
   const categoryContainer = element.querySelector(
@@ -178,6 +333,7 @@ export default function Home(): HTMLElement {
     let card = FeatureCard(data);
     featureContainer?.appendChild(card);
   });
+
   const productContainer = element.querySelector("#product-container");
   async function fetchAllProducts(): Promise<void> {
     const products: Product[] = (await getAllProducts()).sort((a, b) => {
@@ -192,5 +348,19 @@ export default function Home(): HTMLElement {
     }
   }
   fetchAllProducts();
+
+  const otherContainer = element.querySelector("#other-container");
+  async function fetchOther(): Promise<void> {
+    const products: Product[] = (await getAllProducts()).sort((a, b) => {
+      return a.stock - b.stock;
+    });
+    if (products) {
+      products?.slice(10, 22).forEach((product) => {
+        const card = productCard(product);
+        otherContainer?.appendChild(card);
+      });
+    }
+  }
+  fetchOther();
   return element;
 }

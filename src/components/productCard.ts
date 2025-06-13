@@ -5,7 +5,7 @@ export const productCard = (product: Product) => {
   element.className = "product-card group"; // Added group for hover effects
 
   element.innerHTML = /*html*/ `
-  <div class="w-full h-fit max-w-sm rounded-md overflow-hidden bg-white border border-gray-100 shadow-md transition-transform hover:scale-[1.01] hover:shadow-lg">
+  <div id="card" class="w-full h-fit max-w-sm rounded-md overflow-hidden bg-white border border-gray-100 shadow-md transition-transform hover:scale-[1.01] hover:shadow-lg">
     <div class="h-full w-full overflow-hidden">
       <img src="${product.thumbnail}" alt="${
     product.title
@@ -52,6 +52,11 @@ export const productCard = (product: Product) => {
     </div>
   </div>
 `;
+
+  element.querySelector("#card")?.addEventListener("click", handleCardClick);
+  function handleCardClick(): void {
+    window.location.href = `#/shop/${product.id}`;
+  }
 
   return element;
 };
